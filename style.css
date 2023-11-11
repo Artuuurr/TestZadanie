@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin: 0;
+}
+
+body{
+}
+
+section{
+    padding: 0 312px;
+    background: linear-gradient(0deg, #FFF 0%, #FFF 100%), linear-gradient(0deg, #F0F3F6 0%, #F0F3F6 100%), #F5F5F7;
+}
+
+h1{
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    margin: 40px 0 20px 0;
+}
+
+p{
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.3px; 
+}
+button{
+    color:#FFF;
+    background:#4C9EFF;
+    border: #4C9EFF;
+}
+.btn-srt{
+    width: 241px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    padding: 11px 20px;
+    margin: 10px 10px 20px 0;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    letter-spacing: -0.3px; 
+
+}
+input{
+    width: 494px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #4C9EFF;
+    background: #FFFEFE; 
+    padding: 0 0 0 13px;
+    margin: 12px 0 31px 0;
+
+    color: #747474;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.3px; 
+}
+
+
+.box-book{
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px 248px 245px 255px 156px;
+    width: 1296px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.20);
+    padding-left:20px;
+    margin-bottom: 10px;
+
+}
+
+.box-book-inform{
+    column-count:5;
+    margin: 0;
+    padding: 26px 0 26px 0;
+}
+
+.btn-buy{
+    position: absolute;
+    width: 142px;
+    height: 70px;
+    flex-shrink: 0; 
+    right: 0;
+    background: #4C9EFF; 
+    border-radius: 0px 10px 10px 0px; 
+}
+
+.book-inf{
+    padding: 26px 0;
+    width: 250px;
+}
