@@ -1,4 +1,4 @@
-const films = [
+const FILMS = [
     {
         id: 1, 
         name: 'Игра престолов' ,
@@ -60,9 +60,9 @@ const films = [
 const wrapper = document.querySelector('.wrapper');
 const btnSortAscend = document.querySelectorAll('.btn-srt')[0];
 const btnSortDescen = document.querySelectorAll('.btn-srt')[1];
-const inputSort = document.querySelector('.inputSort');
+const inputfilter = document.querySelector('.inputSort');
 
-function displayFilms (array){
+function displayFILMS (array){
     wrapper.innerHTML = array.map((film) => `
         <div class="box-book" id=${film.id}>
             <p style="padding: 26px 0;">${film.name}</p>
@@ -76,7 +76,7 @@ function displayFilms (array){
 }
 
 function sortAscend(){
-    films.sort(function (a, b) {
+    FILMS.sort(function (a, b) {
         if (a.name > b.name) {
           return 1;
         }
@@ -85,12 +85,12 @@ function sortAscend(){
         }
         return 0;
       });
-    console.log(films);
-    displayFilms(films);
+    console.log(FILMS);
+    displayFILMS(FILMS);
 }
 
 function sortDescen(){
-    films.sort(function (a, b) {
+    FILMS.sort(function (a, b) {
         if (a.price < b.price) {
           return 1;
         }
@@ -99,27 +99,20 @@ function sortDescen(){
         }
         return 0;
       });
-    console.log(films);
-    displayFilms(films);
+    console.log(FILMS);
+    displayFILMS(FILMS);
 }
 btnSortAscend.addEventListener("click", sortAscend);
 btnSortDescen.addEventListener("click", sortDescen);
 
+displayFILMS(FILMS);
 
-displayFilms(films);
-
-
-
-inputSort.addEventListener('input', function() {
-    var inputText = filterInput.value.toLowerCase();
-    var filteredFilms = films.filter(function(film) {
-        return film.title.toLowerCase().includes(inputText);
+inputfilter.addEventListener('input', function() {
+    var inputText = inputfilter.value.toLowerCase();
+    var filteredFilms = FILMS.filter(function(film) {
+        return film.name.toLowerCase().includes(inputText);
     });
-    
+    displayFILMS(filteredFilms);
+});
 
-const btnBuy = document.querySelectorAll('.btn-buy');
-
-btnBuy.addEventListener("click", function(array){
-  console.log(films.id);     
-})  
 
