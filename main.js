@@ -75,6 +75,7 @@ function displayFILMS (array){
     `).join("");
 }
 
+
 function sortAscend(){
     FILMS.sort(function (a, b) {
         if (a.name > b.name) {
@@ -85,7 +86,6 @@ function sortAscend(){
         }
         return 0;
       });
-    console.log(FILMS);
     displayFILMS(FILMS);
 }
 
@@ -99,7 +99,6 @@ function sortDescen(){
         }
         return 0;
       });
-    console.log(FILMS);
     displayFILMS(FILMS);
 }
 btnSortAscend.addEventListener("click", sortAscend);
@@ -115,4 +114,14 @@ inputfilter.addEventListener('input', function() {
     displayFILMS(filteredFilms);
 });
 
+const btnsBuy = document.querySelectorAll('.btn-buy');
+
+function changeFilm(film) {
+    console.log(`Купленный фильм: ${film.id}`);
+  }
+
+btnsBuy.forEach((btnBuy, index) => {
+    btnBuy.addEventListener('click', () => {changeFilm(FILMS[index]);  
+    });
+});
 
