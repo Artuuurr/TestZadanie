@@ -62,6 +62,7 @@ const btnSortAscend = document.querySelectorAll('.btn-srt')[0];
 const btnSortDescen = document.querySelectorAll('.btn-srt')[1];
 const inputfilter = document.querySelector('.inputSort');
 
+
 function displayFILMS (array){
     wrapper.innerHTML = array.map((film) => `
         <div class="box-book" id=${film.id}>
@@ -101,6 +102,7 @@ function sortDescen(){
       });
     displayFILMS(FILMS);
 }
+
 btnSortAscend.addEventListener("click", sortAscend);
 btnSortDescen.addEventListener("click", sortDescen);
 
@@ -121,7 +123,8 @@ function changeFilm(film) {
   }
 
 btnsBuy.forEach((btnBuy, index) => {
-    btnBuy.addEventListener('click', () => {changeFilm(FILMS[index]);  
+    btnBuy.addEventListener('click', () => {
+    changeFilm(FILMS[index]);  
     });
 });
 
